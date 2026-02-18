@@ -57,11 +57,11 @@ The high-level API. Handles sharding, persistence, and configuration.
 // Create a new store
 const store = VectorStore.create({
   hnsw: {
-    dimensions: 128, // required
-    M: 16, // max neighbors per node (default: 16)
-    efConstruction: 200, // build-time beam width (default: 200)
-    efSearch: 50, // search-time beam width (default: 50)
-    metric: "euclidean", // "euclidean" | "cosine" | "inner_product"
+    dimensions: 128,      // required
+    M: 16,                // max neighbors per node (default: 16)
+    efConstruction: 200,  // build-time beam width (default: 200)
+    efSearch: 50,         // search-time beam width (default: 50)
+    metric: "euclidean",  // "euclidean" | "cosine" | "inner_product"
   },
   sharding: {
     maxVectorsPerShard: 100_000,
@@ -82,9 +82,9 @@ const results = await store.search([1, 2, 3], 10);
 
 // Search with options
 const filtered = await store.search([1, 2, 3], 10, {
-  efSearch: 200, // override beam width
+  efSearch: 200,              // override beam width
   filter: (id) => id !== "b", // pre-filter by ID
-  includeVectors: true, // attach vector data to results
+  includeVectors: true,       // attach vector data to results
 });
 
 // Delete
@@ -146,10 +146,10 @@ const compacted = index.compact();
 index.shrinkToFit();
 
 // Check state
-index.size; // number of live vectors
-index.has("vec-2"); // true
-index.getVector("vec-2"); // Float32Array | null
-index.memoryUsage(); // bytes
+index.size;                // number of live vectors
+index.has("vec-2");        // true
+index.getVector("vec-2");  // Float32Array | null
+index.memoryUsage();       // bytes
 ```
 
 ### Storage Backends

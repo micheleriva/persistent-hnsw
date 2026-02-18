@@ -6,11 +6,32 @@
     "test": "deno test tests/ --allow-read --allow-write",
     "bench": "deno bench bench/ --allow-read --allow-write --allow-hrtime",
     "bench:full": "deno run --allow-write --allow-read --allow-hrtime bench/full_benchmark.ts",
+    "build": "deno run -A scripts/build_npm.ts",
     "check": "deno check mod.ts",
     "lint": "deno lint",
     "fmt": "deno fmt"
   },
   "compilerOptions": {
     "strict": true
+  },
+  "fmt": {
+    "lineWidth": 140,
+    "semiColons": false,
+    "singleQuote": true,
+    "include": [
+      "./**/*.ts"
+    ]
+  },
+  "lint": {
+    "include": [
+      "src/"
+    ],
+    "rules": {
+      "exclude": [
+        "no-import-prefix",
+        "no-explicit-any",
+        "no-process-global"
+      ]
+    }
   }
 }

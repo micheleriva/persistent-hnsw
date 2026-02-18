@@ -1,7 +1,7 @@
-export { VectorStore } from "./src/vector_store.ts";
-export { HNSWIndex } from "./src/hnsw_index.ts";
-export { InMemoryStorage } from "./src/storage/in_memory_storage.ts";
-export { FileSystemStorage } from "./src/storage/file_system_storage.ts";
+export { VectorStore } from './src/vector_store.ts'
+export { HNSWIndex } from './src/hnsw_index.ts'
+export { InMemoryStorage } from './src/storage/in_memory_storage.ts'
+export { FileSystemStorage } from './src/storage/file_system_storage.ts'
 
 export type {
   DistanceFunction,
@@ -15,6 +15,6 @@ export type {
   StorageBackend,
   Vector,
   VectorStoreConfig,
-} from "./src/types.ts";
+} from './src/types.ts'
 
-export { defaultHNSWConfig, defaultShardConfig } from "./src/types.ts";
+export { defaultHNSWConfig, defaultShardConfig } from './src/types.ts'

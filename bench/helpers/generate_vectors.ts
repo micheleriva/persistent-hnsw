@@ -4,19 +4,19 @@ export function generateVectors(
   dimensions: number,
   seed = 12345,
 ): Float32Array[] {
-  let s = seed;
+  let s = seed
   function rnd(): number {
-    s = (s * 1664525 + 1013904223) & 0xFFFFFFFF;
-    return (s >>> 0) / 0xFFFFFFFF;
+    s = (s * 1664525 + 1013904223) & 0xFFFFFFFF
+    return (s >>> 0) / 0xFFFFFFFF
   }
 
-  const vectors: Float32Array[] = [];
+  const vectors: Float32Array[] = []
   for (let i = 0; i < count; i++) {
-    const v = new Float32Array(dimensions);
+    const v = new Float32Array(dimensions)
     for (let d = 0; d < dimensions; d++) {
-      v[d] = rnd() * 2 - 1;
+      v[d] = rnd() * 2 - 1
     }
-    vectors.push(v);
+    vectors.push(v)
   }
-  return vectors;
+  return vectors
 }

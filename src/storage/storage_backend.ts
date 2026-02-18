@@ -1,1 +1,1 @@
-export type { StorageBackend } from "../types.ts";
+export type { StorageBackend } from '../types.ts'
