@@ -1,4 +1,4 @@
-# hnsw
+# Persistent HNSW
 
 Pure-TypeScript HNSW vector search. No native dependencies, no WASM - just
 TypeScript.
