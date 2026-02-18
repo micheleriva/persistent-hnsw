@@ -7,6 +7,7 @@
     "bench": "deno bench bench/ --allow-read --allow-write --allow-hrtime",
     "bench:full": "deno run --allow-write --allow-read --allow-hrtime bench/full_benchmark.ts",
     "build": "deno run -A scripts/build_npm.ts",
+    "bench:runtimes": "deno run -A scripts/bench_runtimes.ts",
     "check": "deno check mod.ts",
     "lint": "deno lint",
     "fmt": "deno fmt"

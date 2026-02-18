@@ -1,5 +1,7 @@
 # Persistent HNSW
 
+[![CI](https://github.com/micheleriva/persistent-hnsw/actions/workflows/ci.yml/badge.svg)](https://github.com/micheleriva/persistent-hnsw/actions/workflows/ci.yml)
+
 Pure-TypeScript HNSW vector search. No native dependencies, no WASM - just
 TypeScript.
 
